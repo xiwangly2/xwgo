@@ -20,5 +20,8 @@ func loadIndexHTML() {
 }
 
 func RootHandler(w http.ResponseWriter, r *http.Request) {
-	w.Write(indexHTML)
+	_, err := w.Write(indexHTML)
+	if err != nil {
+		return
+	}
 }

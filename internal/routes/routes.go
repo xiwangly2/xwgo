@@ -12,6 +12,9 @@ func NewRouter() *http.ServeMux {
 	// Register routes
 	mux.HandleFunc("/", handlers.RootHandler) // Handle root URL
 	mux.HandleFunc("/ua", handlers.UAHandler)
+	mux.HandleFunc("/qq", handlers.QQHandler)
+	mux.HandleFunc("/yiyan", handlers.YiYanDataHandler)
+	mux.HandleFunc("/ping", handlers.PingHandler)
 
 	return mux
 }
