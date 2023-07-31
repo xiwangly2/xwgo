@@ -1,0 +1,14 @@
+vendor/
+.idea
+.vscode
+logs/
+
+# binary builds
+xwgo
+*.exe
+
+# macos
+.DS_Store
+
+# windwos rc
+*.syso

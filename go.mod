@@ -1,4 +1,4 @@
-module main
+module xwgo
 
 go 1.20
 
