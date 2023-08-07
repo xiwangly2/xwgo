@@ -1,10 +1,11 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="App Engine" type="GoApplicationRunConfiguration" factoryName="Go Application">
+  <configuration default="false" name="xwgo" type="GoApplicationRunConfiguration" factoryName="Go Application">
     <module name="xwgo" />
     <working_directory value="$PROJECT_DIR$" />
     <kind value="DIRECTORY" />
     <directory value="$PROJECT_DIR$" />
     <filePath value="$PROJECT_DIR$" />
+    <output_directory value="$PROJECT_DIR$" />
     <method v="2" />
   </configuration>
 </component>

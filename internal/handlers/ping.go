@@ -18,7 +18,10 @@ func PingHandler(w http.ResponseWriter, r *http.Request) {
 	response := performICMPPing(host)
 
 	w.Header().Set("Content-Type", "text/plain; charset=UTF-8")
-	w.Write([]byte(response))
+	_, err := w.Write([]byte(response))
+	if err != nil {
+		return
+	}
 }
 
 func performICMPPing(host string) string {

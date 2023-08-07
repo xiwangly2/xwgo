@@ -1,8 +1,8 @@
 package handlers
 
 import (
-	"io/ioutil"
 	"net/http"
+	"os"
 )
 
 var indexHTML []byte
@@ -12,14 +12,14 @@ func init() {
 }
 
 func loadIndexHTML() {
-	file, err := ioutil.ReadFile("static/index.html")
+	file, err := os.ReadFile("static/index.html")
 	if err != nil {
 		panic("Error reading index.html: " + err.Error())
 	}
 	indexHTML = file
 }
 
-func RootHandler(w http.ResponseWriter, r *http.Request) {
+func RootHandler(w http.ResponseWriter, _ *http.Request) {
 	_, err := w.Write(indexHTML)
 	if err != nil {
 		return
