@@ -1,4 +1,4 @@
-module xwgo
+module github.com/xiwangly2/xwgo
 
 go 1.20
 

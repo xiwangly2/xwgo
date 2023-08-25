@@ -1,8 +1,8 @@
 package routes
 
 import (
+	"github.com/xiwangly2/xwgo/internal/handlers"
 	"net/http"
-	"xwgo/internal/handlers"
 )
 
 // Wrapper function to handle panics and return Internal Server Error
