@@ -26,6 +26,7 @@ func NewRouter() *http.ServeMux {
 	mux.HandleFunc("/qq", panicHandler(handlers.QQHandler))
 	mux.HandleFunc("/yiyan", panicHandler(handlers.YiYanDataHandler))
 	mux.HandleFunc("/ping", panicHandler(handlers.PingHandler))
+	mux.HandleFunc("/jdt", panicHandler(handlers.JdtHandler))
 
 	return mux
 }
