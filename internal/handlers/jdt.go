@@ -5,7 +5,6 @@ import (
 	"math/rand"
 	"net/http"
 	"sync"
-	"time"
 )
 
 var (
@@ -25,19 +24,24 @@ func JdtHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	// 获取当前时间的秒数
-	_ = time.Now().Second()
-
-	// 生成一个0到5之间的随机递增步长
-	increment := rand.Intn(6)
-
 	mu.Lock()
 	defer mu.Unlock()
 
-	// 增加进度，并确保不超过100
-	progress += increment
-	if progress > 100 {
-		progress = 100
+	// 检查查询参数 reset 是否为 "true"
+	resetParam := r.URL.Query().Get("reset")
+	if resetParam == "true" {
+		// 如果 reset 参数为 "true"，则重置进度为初始值
+		progress = 0
+	} else {
+
+		// 生成一个0到5之间的随机递增步长
+		increment := rand.Intn(6)
+
+		// 增加进度，并确保不超过100
+		progress += increment
+		if progress > 100 {
+			progress = 100
+		}
 	}
 
 	// 创建一个包含进度值的 JSON 对象
