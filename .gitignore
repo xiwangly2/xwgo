@@ -12,3 +12,10 @@ xwgo
 
 # windwos rc
 *.syso
+
+!.gitkeep
+
+# OpenPGP keys
+*.asc
+*.gpg
+*.sig

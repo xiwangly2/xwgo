@@ -3,6 +3,7 @@
     <module name="xwgo" />
     <working_directory value="$PROJECT_DIR$" />
     <kind value="DIRECTORY" />
+    <package value="github.com/xiwangly2/xwgo" />
     <directory value="$PROJECT_DIR$" />
     <filePath value="$PROJECT_DIR$" />
     <output_directory value="$PROJECT_DIR$" />
